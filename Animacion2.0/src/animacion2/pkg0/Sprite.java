@@ -18,11 +18,19 @@ public class Sprite{
         this.ancho=ancho;
         this.alto=alto;
         pixeles = new int[alto][ancho];
-        
-        for(int i=0; i<sprite.alto;i++){
-            for(int j=0; j<sprite.ancho;j++){                
-                    pixeles[i][j]=sprite.pixeles[(alto--*posI)+i][(ancho--*posJ)+j];
-                    System.out.println(pixeles[i][j]);               
+        int barridoI;
+        int barridoJ;
+        barridoI = posI*alto--;
+        barridoJ = posJ*ancho--;
+        for(int i=0; i<this.alto;i++){
+            for(int j=0; j<this.ancho;j++){
+                if(barridoI<sprite.alto && barridoJ<sprite.ancho){
+                    pixeles[i][j]=sprite.pixeles[barridoI][barridoJ];
+                    System.out.println("barridoI: "+barridoI + " barridoJ: "+barridoJ);
+                    //System.out.println(pixeles[i][j]);
+                     barridoJ++;
+                }
+                barridoI++;
             }
         }
     }

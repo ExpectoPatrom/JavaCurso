@@ -25,7 +25,7 @@ public class Animacion20 {
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setSize(dimension);
         HojaSprites SpritePj = new HojaSprites("SpriteSheet.png");
-        Sprite pos1 = new Sprite(SpritePj,52,36,0,0);
+        Sprite pos1 = new Sprite(SpritePj,52,36,0,1);
         BufferedImage fondo = null;
         for(int i=0; i<pos1.alto; i++){
             for(int j=0; j<pos1.ancho; j++){
