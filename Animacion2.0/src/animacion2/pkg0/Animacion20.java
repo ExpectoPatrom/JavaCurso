@@ -1,4 +1,4 @@
-/*
+    /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -27,9 +27,11 @@ public class Animacion20 {
         HojaSprites SpritePj = new HojaSprites("SpriteSheet.png");
         Sprite pos1 = new Sprite(SpritePj,52,36,0,0);
         BufferedImage fondo = null;
-        for(int i=0; i<800; i++){
-            for(int j=0; j<800; j++){
-                fondo.setRGB(i, j, pos1.pixeles[i][j]);
+        for(int i=0; i<pos1.alto; i++){
+            for(int j=0; j<pos1.ancho; j++){
+                //fondo.setRGB(i, j, pos1.pixeles[i][j]);
+                //System.out.println(pos1.pixeles[i][j]);
+                break;
             }
         }        
     }

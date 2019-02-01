@@ -14,16 +14,15 @@ public class Sprite{
     public final int ancho;
     public final int alto;
     int[][] pixeles;
-    public Sprite(HojaSprites sprite,int alto, int ancho,int posX, int posY){
+    public Sprite(HojaSprites sprite,int alto, int ancho,int posI, int posJ){
         this.ancho=ancho;
         this.alto=alto;
         pixeles = new int[alto][ancho];
         
-        for(int x=0; x<sprite.ancho;x++){
-            for(int y=0; y<sprite.alto;y++){
-                if(posX<ancho && posY<alto){
-                    pixeles[x][y]=sprite.pixeles[posX*ancho][posY*alto];
-                }
+        for(int i=0; i<sprite.alto;i++){
+            for(int j=0; j<sprite.ancho;j++){                
+                    pixeles[i][j]=sprite.pixeles[(alto--*posI)+i][(ancho--*posJ)+j];
+                    System.out.println(pixeles[i][j]);               
             }
         }
     }

@@ -28,7 +28,8 @@ public class HojaSprites {
         
         for(int x=0; x<alto;x++){
             for(int y=0; y<ancho; y++){
-                pixeles[x][y]=imagen.getRGB(x,y);
+                pixeles[x][y]=imagen.getRGB(y,x);
+                //System.out.println(pixeles[x][y]);
                 //System.out.println(imagen.getHeight()+" ancho:"+imagen.getWidth());
             }
         }
