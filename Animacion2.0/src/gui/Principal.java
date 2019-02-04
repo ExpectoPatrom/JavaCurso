@@ -14,7 +14,6 @@ import javax.swing.JFrame;
  */
 public class Principal extends JFrame{
     Dimension dimension = new Dimension(800,800);
-    JFrame ventana = new JFrame();
     Lienzo lienzo;
     
     public void Principal(){
@@ -22,13 +21,15 @@ public class Principal extends JFrame{
     }
     public void iniciar(){
         lienzo = new Lienzo();
-        ventana.setVisible(true);
-        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ventana.setResizable(false);
-        ventana.setSize(dimension);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
         setLayout(null);
         add(lienzo);
         pack();
+        setSize(dimension);
+        lienzo.setBounds(0, 0, 800, 800);
+        lienzo.jugar(lienzo.jugando);
     }
     
 }
