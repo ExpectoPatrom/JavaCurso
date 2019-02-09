@@ -14,7 +14,7 @@ import javax.swing.JFrame;
  */
 public class Principal extends JFrame{
     Dimension dimension = new Dimension(800,800);
-    Lienzo lienzo;
+    Lienzo lienzo;    
     
     public void Principal(){
         iniciar();
@@ -29,6 +29,13 @@ public class Principal extends JFrame{
         pack();
         setSize(dimension);
         lienzo.setBounds(0, 0, 800, 800);
-        addKeyListener(lienzo.phillColection);
+        addKeyListener(lienzo.phillColection);          
     }
+    
+//    public void actionPerformed(ActionEvent e){
+//        lienzo.phillColection.actualizar();
+//        System.out.println("aaa");
+//        System.out.println("CALLED");
+//        lienzo.repaint();
+//    }
 }
